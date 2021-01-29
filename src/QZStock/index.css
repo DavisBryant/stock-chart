@@ -1,0 +1,41 @@
+.QZStock-loading-default-svg {
+    width: 3.75em;
+    transform-origin: center;
+    animation: QZStock-loading-default-circle-rotate 2s linear infinite;
+}
+
+.QZStock-loading-default-circle {
+    fill: none;
+    stroke: #136C5E;
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: QZStock-loading-default-circle-dash 1.5s ease-in-out infinite;
+}
+
+.QZStock-loading >.text {
+    display: block;
+    padding: 0 10px;
+    line-height: 30px;
+}
+
+@keyframes QZStock-loading-default-circle-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes QZStock-loading-default-circle-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}
